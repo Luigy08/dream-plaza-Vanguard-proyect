@@ -1,0 +1,202 @@
+
+
+.dataTables_wrapper {
+  @extend .row;
+  margin: 0em;
+  align-items: center;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  color: #333;
+}
+
+.dataTables_length {
+  @extend .col-6;
+  @extend .form-inline;
+}
+
+.dataTables_length > label > select {
+  @extend .form-control;
+  @extend .form-control-sm;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+}
+
+/* Search Bar */
+
+.dataTables_filter {
+  @extend .col-6;
+  text-align: right;
+}
+
+.dataTables_filter > label {
+  text-align: left;
+}
+
+.dataTables_filter > label > input {
+  @extend .form-control;
+}
+
+/* Pagination */
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  cursor: default;
+  color: #175ac0 !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #175ac0 !important;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  text-align: right;
+  padding-top: 0em;
+  margin: auto;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #333 !important;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+thead {
+  color: white;
+  background: #16437d;
+  background: -moz-linear-gradient(top, #175ac0 0%, #175ac0 16%, #175ac0 46%, #2a56d8 55%, #16437d 100%);
+  background: -webkit-linear-gradient(top, #175ac0 0%,#175ac0 16%,#175ac0 46%,#2a56d8 55%,#16437d 100%);
+  background: linear-gradient(to bottom, #175ac0 0%,#175ac0 16%,#175ac0 46%,#2a56d8 55%,#16437d 100%);
+}
+table.table thead th {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-bottom-color: #175ac0!important;
+  border-left: 0;
+  border-right: 0;
+}
+table.table tbody td {
+  border-bottom-width: 2px!important;
+  border-bottom-color: #175ac0 !important;
+  border-left: 0;
+  border-right: 0;
+}
+table.table {
+  border-left: 0;
+  border-right: 0;
+}
+.iconColor{
+  color: #175ac0;
+}
+.tableMedicalHistory{
+  .dataTables_filter > label > input {
+    display: inline-flex;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    min-width: 240px;
+    max-width: 240px;
+    border-radius: 8px;
+    padding-left: 8px;
+  }
+  button{
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+ }
+ .autoform-remove-item-wrap{
+  button {
+    background-color: red!important;
+  }
+}
+
+}
+
+/* Classes for a mobile */
+
+.element-item-table {
+  width: 100%;
+}
+.table-element {
+  border-collapse: collapse;
+}
+
+
+@media screen and (max-width: 640px) {
+  .dataTable {
+    margin-top: 2rem;
+    /* width: 97%; */
+    thead {
+      display: none;
+    }
+
+    tfoot {
+      display: none;
+    }
+
+  }
+
+  table.table tbody td {
+    border: none;
+  }
+
+  table.table tbody tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  table.table {
+    border: 1px solid #dee2e6 !important;
+  }
+
+  .endTable {
+    border-bottom: 1px solid #dee2e6 !important;
+    content: "HOla";
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .dataTables_length {
+    margin-top: 2rem;
+    display: none;
+  }
+
+  .dataTables_filter {
+    display: block;
+  }
+
+}

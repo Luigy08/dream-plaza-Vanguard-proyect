@@ -56,7 +56,7 @@ const Content = new SimpleSchema({
 const PackageSchema = new SimpleSchema({
   origin: {
     type: String,
-    label: 'Nombre',
+    label: 'Origen',
     autoform: {
       afFormGroup: {
         'formgroup-class': 'col col-lg-6 col-md-6 col-sm-12 col-12'
@@ -65,7 +65,7 @@ const PackageSchema = new SimpleSchema({
   },
   destination: {
     type: String,
-    label: 'Nombre',
+    label: 'Destino',
     autoform: {
       afFormGroup: {
         'formgroup-class': 'col col-lg-6 col-md-6 col-sm-12 col-12'
@@ -95,10 +95,15 @@ const PackageSchema = new SimpleSchema({
   },
   flight: {
     type: Array,
-    label: 'Flight',
-    minCount: 1,
-    maxCount: 10,
-    optional: true
+    label: 'Vuelo',
+    optional: true,
+    minCount: 0,
+    maxCount: 5,
+    autoform: {
+      afFormGroup: {
+        'formgroup-class': 'col col-lg-12 col-md-12 col-sm-12 col-12'
+      }
+    }
   },
   'flight.$': {
     type: Content,

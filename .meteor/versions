@@ -28,6 +28,7 @@ ecmascript-runtime-client@0.8.0
 ecmascript-runtime-server@0.7.1
 ejson@1.1.0
 es5-shim@4.8.0
+fastclick@1.0.13
 fetch@0.1.1
 fourseven:scss@4.12.0
 geojson-utils@1.0.10
@@ -53,6 +54,7 @@ lmieulet:meteor-coverage@1.1.4
 logging@1.1.20
 meteor@1.9.3
 meteor-base@1.4.0
+meteor-platform@1.2.6
 meteorhacks:picker@1.0.3
 meteortesting:browser-tests@1.0.0
 meteortesting:mocha@1.1.2

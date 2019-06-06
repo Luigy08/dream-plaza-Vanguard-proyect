@@ -15,10 +15,10 @@ describe('links publications', () => {
   });
 
   describe('links.all', () => {
-    it('sends all links', (done) => {
+    it('sends all links', done => {
       const collector = new PublicationCollector();
 
-      collector.collect('links.all', (collections) => {
+      collector.collect('links.all', collections => {
         assert.equal(collections.links.length, 1);
         done();
       });

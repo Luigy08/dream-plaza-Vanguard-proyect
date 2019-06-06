@@ -85,20 +85,17 @@
 thead {
   color: white;
   background: #16437d;
-  background: -moz-linear-gradient(top, #175ac0 0%, #175ac0 16%, #175ac0 46%, #2a56d8 55%, #16437d 100%);
-  background: -webkit-linear-gradient(top, #175ac0 0%,#175ac0 16%,#175ac0 46%,#2a56d8 55%,#16437d 100%);
-  background: linear-gradient(to bottom, #175ac0 0%,#175ac0 16%,#175ac0 46%,#2a56d8 55%,#16437d 100%);
 }
 table.table thead th {
   padding-top: 2px;
   padding-bottom: 2px;
-  border-bottom-color: #175ac0!important;
+  border-bottom-color: #16437d!important;
   border-left: 0;
   border-right: 0;
 }
 table.table tbody td {
   border-bottom-width: 2px!important;
-  border-bottom-color: #175ac0 !important;
+  border-bottom-color: #16437d !important;
   border-left: 0;
   border-right: 0;
 }
@@ -107,7 +104,7 @@ table.table {
   border-right: 0;
 }
 .iconColor{
-  color: #175ac0;
+  color: #16437d;
 }
 .tableMedicalHistory{
   .dataTables_filter > label > input {

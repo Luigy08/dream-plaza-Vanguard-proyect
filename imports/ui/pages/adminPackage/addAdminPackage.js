@@ -1,6 +1,5 @@
 import './addAdminPackage.html';
 import { Template } from 'meteor/templating';
-
 import toastr from 'toastr';
 import { Package } from '../../../api/package/package';
 

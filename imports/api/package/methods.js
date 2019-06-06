@@ -7,5 +7,8 @@ Meteor.methods({
   'package.insert': doc => {
     PackageSchema.validator();
     Package.insert(doc);
+  },
+  'package.delete': doc => {
+    Package.remove(doc);
   }
 });

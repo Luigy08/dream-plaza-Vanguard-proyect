@@ -1,0 +1,36 @@
+.adminPackage{
+	.list-group-item.autoform-array-item .autoform-remove-item {
+    margin: 6px 15px 6px 6px;
+    border: 0px;
+    padding: 6px 12px;
+  }
+  .list-group-item .autoform-add-item{
+    margin: 6px 6px 6px 6px;
+    border: 0px;
+    padding: 6px 12px;
+  }
+  .panel .panel-default {
+    margin-top: -60px;
+  }
+  .autoform-remove-item {
+    vertical-align: top;
+    margin-right: 15px;
+    background: #ff3545 !important;
+  }
+  .glyphicon-plus:before {
+    content: "\002b"; /*plus sign*/
+  }
+  .glyphicon-minus:before {
+    content: "\2212"; /*minus sign*/
+	}
+	.list-group-item{
+		background:transparent !important;
+		border: 0px!important;
+	}
+	ul.list-group {
+		counter-reset: array-index;
+}
+.panel-heading{
+	visibility: hidden;
+}
+}

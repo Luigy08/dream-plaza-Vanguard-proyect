@@ -18,7 +18,7 @@ Template.info.events({
 
     const { title, url } = event.target;
 
-    Meteor.call('links.insert', title.value, url.value, (error) => {
+    Meteor.call('links.insert', title.value, url.value, error => {
       if (error) {
         alert(error.error);
       } else {

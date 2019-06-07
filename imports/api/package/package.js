@@ -7,27 +7,27 @@ import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 const Package = new Mongo.Collection('package');
 const Content = new SimpleSchema({
-  from: {
+  airline: {
     type: String,
-    label: 'Desde',
+    label: 'Aerolínea',
     autoform: {
       afFormGroup: {
         'formgroup-class': 'col col-lg-12 col-md-12 col-sm-12 col-12'
       }
     }
   },
-  to: {
+  from: {
     type: String,
-    label: 'a',
+    label: 'Desde',
     autoform: {
       afFormGroup: {
         'formgroup-class': 'col col-lg-6 col-md-6 col-sm-12 col-12'
       }
     }
   },
-  airline: {
+  to: {
     type: String,
-    label: 'Aerolínea',
+    label: 'a',
     autoform: {
       afFormGroup: {
         'formgroup-class': 'col col-lg-6 col-md-6 col-sm-12 col-12'
@@ -56,7 +56,7 @@ const Content = new SimpleSchema({
 const PackageSchema = new SimpleSchema({
   origin: {
     type: String,
-    label: 'Nombre',
+    label: 'Origen',
     autoform: {
       afFormGroup: {
         'formgroup-class': 'col col-lg-6 col-md-6 col-sm-12 col-12'
@@ -65,7 +65,7 @@ const PackageSchema = new SimpleSchema({
   },
   destination: {
     type: String,
-    label: 'Nombre',
+    label: 'Destino',
     autoform: {
       afFormGroup: {
         'formgroup-class': 'col col-lg-6 col-md-6 col-sm-12 col-12'
@@ -95,10 +95,15 @@ const PackageSchema = new SimpleSchema({
   },
   flight: {
     type: Array,
-    label: 'Flight',
-    minCount: 1,
-    maxCount: 10,
-    optional: true
+    label: 'Vuelo',
+    optional: true,
+    minCount: 0,
+    maxCount: 5,
+    autoform: {
+      afFormGroup: {
+        'formgroup-class': 'col col-lg-12 col-md-12 col-sm-12 col-12'
+      }
+    }
   },
   'flight.$': {
     type: Content,
@@ -106,7 +111,7 @@ const PackageSchema = new SimpleSchema({
       bodyClass: 'panel-body row'
     }
   }
-}, { check: check, tracker: Tracker, clean: { getAutoValues: true } });
+}, { check: check, tracker: Tracker });
 
 Package.deny({
   insert () { return true; },

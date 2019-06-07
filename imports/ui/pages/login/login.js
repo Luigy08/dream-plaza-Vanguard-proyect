@@ -1,5 +1,6 @@
 import './login.html';
 import {Meteor} from 'meteor/meteor';
+import { Router } from 'meteor/iron:router';
 
 Template.login.events({
     'submit .login-form': async (event) => {
@@ -10,14 +11,16 @@ Template.login.events({
         Meteor.loginWithPassword({username}, password, (err) => {
             if(err){
                 throw err;
+            }else{
+                console.log('Logged in succesfully with ID:', Meteor.userId());
+                Router.go('/');
+                Meteor.logout((err)=>{
+                    if(err){
+                        throw err;
+                    }
+                
+                });
             }
-            console.log('Logged in succesfully with ID:', Meteor.userId());
-            Meteor.logout((err)=>{
-                if(err){
-                    throw err;
-                }
-            
-            });
         });
     }
 });

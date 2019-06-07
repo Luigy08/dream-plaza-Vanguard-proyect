@@ -1,14 +1,20 @@
 <template name="login">
-    <div class="container">
-        <div class="row">
-            <div class="tableMedicalHistory">
-                <h2 class="title-md text-center title-kielsa">Log in to your account</h2>
+
+    <div class="wrapper fade-in-down">
+            <h2 class="title-md text-center fade-in first">Log in to your account</h2>
+
+            <div class="form-content">
+        
                 <form class="login-form">
-                    <input type="text" name="loginUsername" placeholder="Username"/>
-                    <input type="password" name="loginPassword" placeholder="Password"/>
-                    <button id="loginButton" class="btn mb-4">Log in</button>
+                    <input type="text" id="loginUsername" class="fade-in second" name="loginUsername" placeholder="Username">
+                    <input type="password" id="loginPassword" class="fade-in third" name="loginPassword" placeholder="Password">
+                    <input type="submit" class="fade-in fourth" value="Log In">
                 </form>
+            
+                <div class="form-footer">
+                    <a id="toSignup" href="/signup">Signup</a>
+                </div>
+        
             </div>
-        </div>
     </div>
 </template>

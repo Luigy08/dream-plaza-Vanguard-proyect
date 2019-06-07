@@ -1,12 +1,12 @@
 <template name="addAdminPackage">
-    <div class="modal fade bd-example-modal-lg" role="dialog" id="addAdminPackage" aria-hidden="true">
+    <div class="adminPackage modal fade bd-example-modal-lg" role="dialog" id="addAdminPackage" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
           <div class="modal-body">
             <div class="container">
               {{# autoForm
-                collection="Package"
+                schema=PackageSchema
                 id="insertPackageForm"
                 type="method"
                 meteormethod="package.insert"

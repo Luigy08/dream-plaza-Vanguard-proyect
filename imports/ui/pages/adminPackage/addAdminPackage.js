@@ -1,9 +1,8 @@
 import './addAdminPackage.html';
 import { Template } from 'meteor/templating';
 import toastr from 'toastr';
-import { Package } from '../../../api/package/package';
+import { PackageSchema } from '../../../api/package/package';
 
-window.Package = Package;
 Template.addAdminPackage.onCreated(() => {
   Meteor.subscribe('Package.all');
 });
@@ -12,7 +11,9 @@ Template.addAdminPackage.onRendered(() => {
     AutoForm.resetForm('insertExamForm');
   });
 });
-
+Template.addAdminPackage.helpers({
+  PackageSchema
+});
 AutoForm.addHooks('insertExamForm', {
   onSuccess: function () {
     toastr.success('Agregado');

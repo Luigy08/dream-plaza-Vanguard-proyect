@@ -1,5 +1,6 @@
 import './adminPackage.html';
 import './addAdminPackage';
+import './updatePackage';
 
 Template.adminPackage.events({
   'click #deletePackage': function () {

@@ -10,5 +10,8 @@ Meteor.methods({
   },
   'package.delete': doc => {
     Package.remove(doc);
+  },
+  'package.update': doc => {
+    Package.update(doc);
   }
 });

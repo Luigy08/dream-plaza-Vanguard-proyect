@@ -12,7 +12,9 @@ Template.addAdminPackage.onRendered(() => {
   });
 });
 Template.addAdminPackage.helpers({
-  PackageSchema
+  PackageSchema () {
+    return PackageSchema;
+  }
 });
 AutoForm.addHooks('insertExamForm', {
   onSuccess: function () {

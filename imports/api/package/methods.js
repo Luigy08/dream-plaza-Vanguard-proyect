@@ -12,6 +12,15 @@ Meteor.methods({
     Package.remove(doc);
   },
   'package.update': doc => {
-    Package.update(doc);
+    const data = doc.modifier.$set;
+    Package.update({ _id: doc._id }, {
+      $set: {
+        origin: data.origin,
+        destination: data.destination,
+        start: data.start,
+        final: data.final,
+        flight: data.flight
+      }
+    });
   }
 });

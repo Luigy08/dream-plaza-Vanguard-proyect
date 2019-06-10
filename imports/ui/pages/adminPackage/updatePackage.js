@@ -1,7 +1,7 @@
 import './updatePackage.html';
 import { Template } from 'meteor/templating';
 import toastr from 'toastr';
-import { PackageSchema } from '../../../api/package/package';
+import { PackageSchema, Package } from '../../../api/package/package';
 
 Template.updatePackage.onCreated(() => {
   Meteor.subscribe('Package.all');
@@ -12,7 +12,12 @@ Template.updatePackage.onRendered(() => {
   });
 });
 Template.updatePackage.helpers({
-  PackageSchema
+  PackageSchema () {
+    return PackageSchema;
+  },
+  doc () {
+    return Package.findOne({ _id: Session.get('idPackage') });
+  }
 });
 AutoForm.addHooks('updatePackageForm', {
   onSuccess: function () {

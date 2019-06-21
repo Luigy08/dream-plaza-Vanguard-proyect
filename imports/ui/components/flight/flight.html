@@ -4,7 +4,7 @@
       <div class="label label-green">Space X</div>
     </div>
     <div class="flight-cities">
-      <div class="flight-city">Earth</div>
+      <div class="flight-city">{{ origin }}</div>
       <div class="flight-progress">
         <div class="flight-progress-track">&#9992;</div>
       </div>
@@ -14,7 +14,7 @@
       <div class="flight-progress">
         <div class="flight-progress-track2">&#9992;</div>
       </div>
-      <div class="flight-city">Jupiter</div>
+      <div class="flight-city">{{ destination }}</div>
     </div>
     <div class="flight-leg flight-from">
       <table class="flight-details">
@@ -25,7 +25,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>10/05/2019</td>
+            <td>{{ start }}</td>
           </tr>
         </tbody>
       </table>
@@ -39,7 +39,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>20/07/2019</td>
+            <td>{{ final }}</td>
           </tr>
         </tbody>
       </table>

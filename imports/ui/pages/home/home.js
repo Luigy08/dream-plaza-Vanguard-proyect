@@ -1,6 +1,7 @@
 import './home.html';
 import '../../components/hello/hello';
 import '../../components/info/info';
+import '../../components/flight/flight';
 import { Template } from 'meteor/templating';
 import { Package } from '../../../api/package/package';
 
@@ -8,10 +9,22 @@ Template.App_home.onCreated(() => {
   Meteor.subscribe('package.all');
 });
 Template.App_home.helpers({
-  paquete () {
-    return Package.find({ origin: 'hola', destination: 'hola' });
+  paquete() {
+    const paquetes = Package.find().map(package => {
+      const { destination, final, flight, origin, start } = package;
+      return {
+        destination,
+        final,
+        airline: flight[0].airline,
+        origin,
+        start,
+        flights: flight.length()
+      };
+    });
+    console.log(paquetes);
+    return Package.find();
   },
-  hola () {
+  hola() {
     return 'hola como estas ......';
   }
 });

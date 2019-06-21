@@ -1,10 +1,17 @@
 <template name="App_home">
-  {{> hello}}
-  {{> info}}
-  {{> flight}}
-  <strong>{{hola}}</strong>
+  <!-- {{> hello}}
+  {{> info}} -->
+  <input type="text" id="search_home" />
   {{#each paquete}}
-    <p>{{origin}}</p>
-    {{destination}}
+  {{> flight 
+    origin=origin 
+    start=start
+    destination=destination
+    final=final
+  }}
   {{/each}}
 </template>
+
+<!-- start=start destination=destination final=final -->
+<!-- airline=flight[0].airline -->
+<!-- flights=flight.length()-1 -->

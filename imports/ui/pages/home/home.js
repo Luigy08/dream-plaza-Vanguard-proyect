@@ -5,26 +5,31 @@ import '../../components/flight/flight';
 import { Template } from 'meteor/templating';
 import { Package } from '../../../api/package/package';
 
-Template.App_home.onCreated(() => {
+Template.home.onCreated(() => {
   Meteor.subscribe('package.all');
+  const arreglo = [];
+  Session.set('packages', arreglo);
 });
-Template.App_home.helpers({
-  paquete() {
-    const paquetes = Package.find().map(package => {
-      const { destination, final, flight, origin, start } = package;
-      return {
-        destination,
-        final,
-        airline: flight[0].airline,
-        origin,
-        start,
-        flights: flight.length()
-      };
-    });
-    console.log(paquetes);
-    return Package.find();
+Template.home.helpers({
+  paquete () {
+    return Session.get('packages');
   },
-  hola() {
+  hola () {
     return 'hola como estas ......';
+  }
+});
+
+Template.home.events({
+  'click #search': function () {
+    const temp = Package.find({
+      origin: $('#originInput').val(),
+      destination: $('#destinationInput').val(),
+      start: $('#salidaInput').val(),
+      final: $('#llegadaInput').val()
+    }).fetch();
+    Session.set('packages', temp);
+  },
+  'click .cardPackage': function () {
+    Session.set('idPackage', this._id);
   }
 });

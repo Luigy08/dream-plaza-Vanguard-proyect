@@ -14,7 +14,7 @@ Router.configure({
 
 Router.route('/', {
   name: 'home',
-  template: 'App_home'
+  template: 'home'
 });
 
 Router.route('/admin-package', {

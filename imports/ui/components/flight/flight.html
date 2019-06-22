@@ -1,0 +1,48 @@
+<template name="flight">
+  <div class="flight">
+    <div class="flight-desc">
+      <div class="label label-green">Space X</div>
+    </div>
+    <div class="flight-cities">
+      <div class="flight-city">{{ origin }}</div>
+      <div class="flight-progress">
+        <div class="flight-progress-track">&#9992;</div>
+      </div>
+      <div class="escalas">
+        2 Escalas
+      </div>
+      <div class="flight-progress">
+        <div class="flight-progress-track2">&#9992;</div>
+      </div>
+      <div class="flight-city">{{ destination }}</div>
+    </div>
+    <div class="flight-leg flight-from">
+      <table class="flight-details">
+        <thead>
+          <tr>
+            <td>Fecha Salida</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ start }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flight-leg flight-to">
+      <table class="flight-details">
+        <thead>
+          <tr>
+            <td>Fecha Llegada</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ final }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
